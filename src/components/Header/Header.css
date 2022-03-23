@@ -1,0 +1,10 @@
+.header{
+    background-color: rgb(252, 169, 92);
+   
+}
+
+.items{
+    list-style: none;
+    justify-content: end;
+
+}
