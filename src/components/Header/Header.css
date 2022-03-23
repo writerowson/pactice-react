@@ -1,10 +1,15 @@
 .header{
     background-color: rgb(252, 169, 92);
-   
+   font-size: 20px;
+   font-weight: 700;
+   padding: 20px;
+}
+.menu{
+    justify-content: end;
 }
 
 .items{
     list-style: none;
-    justify-content: end;
+    font-weight: 400;
 
 }
