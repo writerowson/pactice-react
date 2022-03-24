@@ -1,5 +1,7 @@
 import React from 'react';
 import './Header.css'
+
+// ২. ওয়েবসাইট এ একটা হেডার দিয়ে দাও। তোমার ইচ্ছা মতো একটা দিয়ে দাও। এইটার জন্য বেশি সময় দিও না। তবে আলাদা একটা কম্পোনেন্ট বানাও 
 const Header = () => {
     return (
         <div className='header '>
