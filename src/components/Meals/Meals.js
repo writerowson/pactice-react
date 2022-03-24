@@ -20,16 +20,25 @@ const Meals = () => {
     useEffect(() => {
 
     }, [])
+
+    const handleCart = (food) => {
+        console.log(food)
+        setcart(food)
+    }
+
     return (
         <div className='container   '>
             <div className='row d-flex '>
-                <div className=' col-lg-8 col-md-8 col-6 '>
+                <div className=' col-lg-8 col-md-8 col-8 '>
                     {
-                        foods.map(food => <Meal food={food}></Meal>)
+                        foods.map(food => <Meal
+                            key={food.idMeal}
+                            foodData={food}
+                            handleCart={handleCart}></Meal>)
                     }
 
                 </div>
-                <div className=' col-lg-4 col-md-4 col-6 '>
+                <div className=' col-lg-4 col-md-4 col-4 '>
                     {
 
                         <Cart cart={cart}></Cart>

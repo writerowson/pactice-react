@@ -1,22 +1,29 @@
-import React from 'react';
-import Cart from '../Cart/Cart';
+import React, { useState } from 'react';
+import { RiShoppingCartFill } from "react-icons/ri"
 import './Meal.css'
 
 // ৩. প্রত্যেকটা meal দেখাও। meal এর মধ্যে meal রিলেটেড কিছু তথ্য দেখাও এবং ছবি দেখাও। 
-const Meal = ({ food }) => {
-    console.log(food);
+const Meal = ({ foodData }) => {
+    const [cart, setcart] = useState([])
+
+    const { strMeal, strMealThumb, strCategory, strIngredient1, strInstructions } = foodData
+    const handleCart = () => {
+        console.log('clicked')
+        setcart(foodData)
+    }
+
     return (
         <div className='row'>
             <div className='food '>
                 <div className="card  m-5 ">
-                    <img className='w-100' src={food.strMealThumb} alt="" />
+                    <img className='w-100' src={strMealThumb} alt="" />
                     <div className='p-3  m-3'>
-                        <h3>{food.strMeal}</h3>
-                        <p><b>Category: </b>{food.strCategory}</p>
-                        <p><b>Ingredients:</b> {food.strIngredient1}</p>
-                        <p><b>Recipe: </b>{food.strInstructions.slice(0, 300)}...</p>
+                        <h3>{strMeal}</h3>
+                        <p><b>Category: </b>{strCategory}</p>
+                        <p><b>Ingredients:</b> {strIngredient1}</p>
+                        <p><b>Recipe: </b>{strInstructions.slice(0, 300)}...</p>
                     </div>
-                    <button className='baton p-2'>ADD to cart</button>
+                    <button onClick={handleCart} className='baton p-2'> ADD to cart <RiShoppingCartFill></RiShoppingCartFill> </button>
                 </div>
             </div>
 
