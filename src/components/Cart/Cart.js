@@ -2,12 +2,14 @@ import React from 'react';
 import "./Cart.css"
 
 
-const Cart = ({ newCart }) => {
-    const { strMeal } = newCart
+const Cart = ({ cart }) => {
+
     return (
         <div className='cart'>
-            <h4>Order Summary</h4>
-            <p>Selected Item : {strMeal}</p>
+            <h4>Order Summary : {cart.length}</h4>
+
+            {/* <ul>  {cart.map(p => <li key={idMeal}>{p.strMeal}</li>)}  </ul> */}
+            <ul >  {cart.map(p => <li key={p.idMeal}>{p.strMeal}</li>)}  </ul>
         </div>
     );
 };

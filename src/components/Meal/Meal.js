@@ -19,6 +19,8 @@ const Meal = ({ foodData, handleCart }) => {
                         <p><b>Main Ingredients:</b> {strIngredient1}</p>
                         <p><b>Recipe: </b>{strInstructions.slice(0, 300)}...</p>
                     </div>
+                    {/* যে বাটনে ক্লিক করবে সেই বাটনে font awesome দিয়ে কোন একটা আইকন যোগ করো।  */}
+
                     <button onClick={() => handleCart(foodData)} className='baton p-2'> ADD to cart <RiShoppingCartFill></RiShoppingCartFill> </button>
                 </div>
             </div>

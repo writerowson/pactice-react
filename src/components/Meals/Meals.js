@@ -34,12 +34,9 @@ const Meals = () => {
                 </div>
                 <div className=' col-lg-4 col-md-4 col-4 '>
                     {/* {<Cart newCart={cart}></Cart>} */}
-                    {
-                        cart.map(item => <Cart
-                            key={item.idMeal}
-                            newCart={cart}
-                        ></Cart>)
-                    }
+
+                    <Cart cart={cart} ></Cart>
+
                 </div>
             </div>
         </div>
