@@ -2,12 +2,12 @@ import React from 'react';
 import "./Cart.css"
 
 
-const Cart = ({ cart }) => {
-    const { idMeal } = cart
+const Cart = ({ newCart }) => {
+    const { strMeal } = newCart
     return (
         <div className='cart'>
             <h4>Order Summary</h4>
-            <p>Selected Item : {idMeal}</p>
+            <p>Selected Item : {strMeal}</p>
         </div>
     );
 };
